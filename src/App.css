@@ -1,4 +1,4 @@
- /* width */
+/* width */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -18,6 +18,28 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+/*scroll_box width */
+.scroll_box::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+}
+
+/*scroll_box Track */
+.scroll_box::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/*scroll_box Handle */
+.scroll_box::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+/*scroll_box Handle on hover */
+.scroll_box::-webkit-scrollbar-thumb:hover {
   background: darkgray;
 }
 

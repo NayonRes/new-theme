@@ -9,6 +9,7 @@ import {
   Avatar,
   IconButton,
   Box,
+  Button,
 } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import LinearProgress from "@mui/material/LinearProgress";
@@ -65,170 +66,17 @@ const Dashboard = () => {
   }, []);
   return (
     <>
-      <Grid container alignItems="center" spacing={3} sx={{ mb: 4 }}>
-        {/* <Grid item xs={9}>
-          <Paper sx={{py:3, px: 0, height: "174px" }}>
-            {" "}
-            <Grid
-              container
-              alignItems="center"
-              justifyContent="space-between"
-              sx={{ mb: 1.125, px: 3 }}
-            >
-              <Grid item xs="auto">
-                <Typography
-                  variant="base"
-                  color="text.main"
-                  sx={{ fontWeight: 500 }}
-                >
-                  Statistics
-                </Typography>
-              </Grid>
-              <Grid item xs="auto">
-                <Typography
-                  variant="medium"
-                  color="text.main"
-                  sx={{ fontWeight: 400 }}
-                >
-                  Updated 1 month ago
-                </Typography>
-              </Grid>
-            </Grid>
-            <Divider />
-            <Grid container alignItems="center" sx={{ mt: 2.5, px: 3 }}>
-              <Grid item xs={3}>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs="auto">
-                    {" "}
-                    <Avatar
-                      sx={{
-                        width: 36,
-                        height: 36,
-                        bgcolor: `${theme.palette.secondary.light}`,
-                      }}
-                    >
-                      <SecurityIcon color={theme.palette.secondary.main} />
-                    </Avatar>
-                  </Grid>
-                  <Grid item xs="auto">
-                    <Typography
-                      variant="h5"
-                      color="text.light"
-                      sx={{ fontWeight: 500 }}
-                    >
-                      168119
-                    </Typography>
-                    <Typography
-                      variant="medium"
-                      color="text.main"
-                      sx={{ fontWeight: 400 }}
-                    >
-                      e-KYC Attempted
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid item xs={3}>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs="auto">
-                    {" "}
-                    <Avatar
-                      sx={{
-                        width: 36,
-                        height: 36,
-                        bgcolor: `${theme.palette.info.light}`,
-                      }}
-                    >
-                      <VerifyIcon color={theme.palette.info.main} />
-                    </Avatar>
-                  </Grid>
-                  <Grid item xs="auto">
-                    <Typography
-                      variant="h5"
-                      color="text.light"
-                      sx={{ fontWeight: 500 }}
-                    >
-                      91825
-                    </Typography>
-                    <Typography
-                      variant="medium"
-                      color="text.main"
-                      sx={{ fontWeight: 400 }}
-                    >
-                      Verified e-KYC
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid item xs={3}>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs="auto">
-                    {" "}
-                    <Avatar
-                      sx={{
-                        width: 36,
-                        height: 36,
-                        bgcolor: `${theme.palette.warning.light}`,
-                      }}
-                    >
-                      <ListIcon2 color={theme.palette.warning.main} />
-                    </Avatar>
-                  </Grid>
-                  <Grid item xs="auto">
-                    <Typography
-                      variant="h5"
-                      color="text.light"
-                      sx={{ fontWeight: 500 }}
-                    >
-                      $16926.8
-                    </Typography>
-                    <Typography
-                      variant="medium"
-                      color="text.main"
-                      sx={{ fontWeight: 400 }}
-                    >
-                      Due Bill
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-              <Grid item xs={3}>
-                <Grid container alignItems="center" spacing={2}>
-                  <Grid item xs="auto">
-                    {" "}
-                    <Avatar
-                      sx={{
-                        width: 36,
-                        height: 36,
-                        bgcolor: `${theme.palette.success.light}`,
-                      }}
-                    >
-                      <MoneyIcon color={theme.palette.success.main} />
-                    </Avatar>
-                  </Grid>
-                  <Grid item xs="auto">
-                    <Typography
-                      variant="h5"
-                      color="text.light"
-                      sx={{ fontWeight: 500 }}
-                    >
-                      $862.6
-                    </Typography>
-                    <Typography
-                      variant="medium"
-                      color="text.main"
-                      sx={{ fontWeight: 400 }}
-                    >
-                      Paid
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Paper>
-        </Grid> */}
+      <Grid container alignItems="center" sx={{ mb: 4 }}>
         <Grid item xs={3}>
-          <Paper sx={{ px: 6, py: 2.5, borderRadius: "20px", display: "flex" }}>
+          <Paper
+            sx={{
+              px: 6,
+              py: 2.5,
+              borderRadius: "20px 0px 0px 20px",
+              boxSizing: "border-box",
+              height: "175px",
+            }}
+          >
             <Grid container alignItems="center" spacing={2.5}>
               <Grid item xs="auto">
                 <Badge
@@ -368,6 +216,244 @@ const Dashboard = () => {
                 </Box>
               </Grid>
             </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper sx={{ px: 6, py: 2.5, borderRadius: "0px", height: "175px" }}>
+            <Grid container alignItems="center" spacing={2.5}>
+              <Grid item xs={6}>
+                <Typography
+                  variant="base"
+                  color="text.main"
+                  sx={{ fontWeight: 500, mb: 0.75 }}
+                >
+                  Total KYC Growth
+                </Typography>
+                <Typography variant="small" color="text.fade" sx={{ mb: 0.75 }}>
+                  6 Month Report
+                </Typography>
+
+                <Typography
+                  variant="h5"
+                  color="text.main"
+                  sx={{ fontWeight: 500, mb: 1 }}
+                >
+                  4,673
+                </Typography>
+                <Button
+                  color="secondary"
+                  sx={{
+                    background: "#F0F9F9",
+                    textTransform: "none",
+                    px: 1.25,
+                    py: 0.75,
+                    fontSize: "14px",
+                  }}
+                >
+                  View All
+                </Button>
+              </Grid>
+              <Grid item xs={6}>
+                <img
+                  src="/assets/Chart.png"
+                  alt="chart"
+                  style={{ maxWidth: "140px" }}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper sx={{ px: 6, py: 2.5, borderRadius: "0px", height: "175px" }}>
+            <Grid container alignItems="center" spacing={2.5}>
+              <Grid item xs={6}>
+                <Typography
+                  variant="base"
+                  color="text.main"
+                  sx={{ fontWeight: 500, mb: 0.75 }}
+                >
+                  KYC on hold
+                </Typography>
+                <Typography variant="small" color="text.fade" sx={{ mb: 0.75 }}>
+                  Month Report
+                </Typography>
+
+                <Typography
+                  variant="h5"
+                  color="text.main"
+                  sx={{ fontWeight: 500, mb: 1 }}
+                >
+                  4,673
+                </Typography>
+                <Button
+                disabled
+                  // color="secondary"
+                  sx={{
+                    background: "#F9E8EF",
+                    color: "#DF8CAE !important",
+                    textTransform: "none",
+                    px: 1.25,
+                    py: 0.75,
+                    fontSize: "14px",
+                  }}
+                >
+                  +15.2%
+                </Button>
+              </Grid>
+              <Grid item xs={6}>
+                <img
+                  src="/assets/Chart.png"
+                  alt="chart"
+                  style={{ maxWidth: "140px" }}
+                />
+              </Grid>
+            </Grid>
+          </Paper>
+        </Grid>
+        <Grid item xs={3}>
+          <Paper sx={{ px: 6, py: 2.5, borderRadius: "0px", height: "175px" }}>
+            <Grid container alignItems="center" spacing={2.5} sx={{ mb: 2 }}>
+              <Grid item xs={10}>
+                <Grid container alignItems="center" spacing={1}>
+                  <Grid item xs="auto">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="27"
+                      height="26"
+                      viewBox="0 0 27 26"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.5 6.97668V10.5842"
+                        stroke="#222222"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M13.5217 2.16663C9.53501 2.16663 6.30668 5.39496 6.30668 9.38163V11.6566C6.30668 12.3933 6.00334 13.4983 5.62418 14.1266L4.24834 16.4233C3.40334 17.8425 3.98834 19.4241 5.54834 19.9441C10.7267 21.6666 16.3275 21.6666 21.5058 19.9441C22.9683 19.4566 23.5967 17.745 22.8058 16.4233L21.43 14.1266C21.0508 13.4983 20.7475 12.3825 20.7475 11.6566V9.38163C20.7367 5.41663 17.4867 2.16663 13.5217 2.16663Z"
+                        stroke="#222222"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M17.1075 20.3883C17.1075 22.3708 15.4825 23.9958 13.5 23.9958C12.5141 23.9958 11.6041 23.5841 10.9541 22.9341C10.3041 22.2841 9.89246 21.3741 9.89246 20.3883"
+                        stroke="#222222"
+                        stroke-width="1.5"
+                        stroke-miterlimit="10"
+                      />
+                    </svg>
+                  </Grid>
+                  <Grid item xs="auto">
+                    <Typography
+                      variant="base"
+                      color="text.main"
+                      sx={{ fontWeight: 500 }}
+                    >
+                      Imitate Action Needed
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={2} sx={{ textAlign: "right" }}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="14"
+                  viewBox="0 0 20 14"
+                  fill="none"
+                >
+                  <path
+                    d="M12.4302 0.929932L18.5002 6.99993L12.4302 13.0699"
+                    stroke="#BE185D"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1.5 7H18.33"
+                    stroke="#BE185D"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </Grid>
+            </Grid>
+            {/* 1111111111111---------------------------------------- */}
+            <Box className="scroll_box" sx={{ height: "90px", overflow: "auto",pr:.5 }}>
+              {Array(8)
+                .fill(null)
+                .map((el) => (
+                  <Grid container alignItems="center" spacing={1}>
+                    <Grid item xs={9}>
+                      <Grid container alignItems="center">
+                        <Grid item xs={2}>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="19"
+                            height="18"
+                            viewBox="0 0 19 18"
+                            fill="none"
+                          >
+                            <path
+                              d="M2 16.5H17"
+                              stroke="#606060"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7.8125 3V16.5H11.1875V3C11.1875 2.175 10.85 1.5 9.8375 1.5H9.1625C8.15 1.5 7.8125 2.175 7.8125 3Z"
+                              stroke="#606060"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M2.75 7.5V16.5H5.75V7.5C5.75 6.675 5.45 6 4.55 6H3.95C3.05 6 2.75 6.675 2.75 7.5Z"
+                              stroke="#606060"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M13.25 11.25V16.5H16.25V11.25C16.25 10.425 15.95 9.75 15.05 9.75H14.45C13.55 9.75 13.25 10.425 13.25 11.25Z"
+                              stroke="#606060"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </Grid>
+                        <Grid item xs={10}>
+                          <Typography
+                            variant="small"
+                            color="primary.main"
+                            sx={{
+                              fontWeight: 500,
+                              whiteSpace: "nowrap",
+                              textOverflow: "ellipsis",
+                              overflow: "hidden",
+                            }}
+                          >
+                            It has survived not only five centuries.
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid item xs={3} sx={{ textAlign: "right" }}>
+                      <Typography
+                        variant="small"
+                        color="text.fade"
+                        sx={{ fontWeight: 500 }}
+                      >
+                        07:40 am
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                ))}
+            </Box>
           </Paper>
         </Grid>
       </Grid>
